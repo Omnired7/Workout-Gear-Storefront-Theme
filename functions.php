@@ -46,7 +46,9 @@ if ( ! function_exists( 'phoenix_gear_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'phoenix-gear' ),
 		) );
-
+		register_nav_menus( array(
+			'menu-2' => esc_html__( 'Footer', 'phoenix-gear' ),
+		) );
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -115,15 +117,14 @@ function phoenix_gear_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'phoenix_gear_widgets_init' );
-
 /**
  * Enqueue scripts and styles.
  */
 function phoenix_gear_scripts() {
+	wp_enqueue_style('phoenix-gear-adobe-fonts', 'https://use.typekit.net/cjs5usr.css"', array(), '1.0');
 	wp_enqueue_style( 'phoenix-gear-styles', get_template_directory_uri().'/css/styles.css' );
-
 	wp_enqueue_script( 'phoenix-gear-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
+	Wp_enqueue_script('phoenix-gear-script', get_template_directory_uri().'/js/script.js', array('jquery'));
 	wp_enqueue_script( 'phoenix-gear-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	if(is_front_page()){
 		wp_enqueue_style('phoenix-gear-front-page-styles', get_template_directory_uri().'/css/front-page.css' , null, '1.0');

@@ -18,16 +18,22 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
             <div class='front-page-parallax'>
-                <span></span>
+				<div>
+					<span>Forged in the fire of tragedy <br> Hope rises from the ashes</span>
+					<?php the_custom_logo(); ?>
+				</div>
             </div>
+			<?php $front_parallax = wp_get_attachment_image_src(get_theme_mod('front_page_banner_img'), 'full'); ?>
             <style>
                 #main .front-page-parallax{
-                    background: blue;
+                    background: url(<?php echo $front_parallax[0]; ?>) ;
+					background-repeat: no-repeat;
+					background-attachment: fixed;
+					background-size: cover;
                 }
             </style>
 		<?php
 		if ( have_posts() ) :
-
 			if ( is_home() && ! is_front_page() ) :
 				?>
 				<header>
@@ -35,26 +41,19 @@ get_header();
 				</header>
 				<?php
 			endif;
-
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
 				get_template_part( 'template-parts/content', get_post_type() );
-
 			endwhile;
-
 			the_posts_navigation();
-
 		else :
-
 			get_template_part( 'template-parts/content', 'none' );
-
 		endif;
 		?>
 

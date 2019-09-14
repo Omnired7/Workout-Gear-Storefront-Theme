@@ -823,7 +823,7 @@ a:hover, a:active {
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: unset;
 }
 
 .updated:not(.published) {
@@ -833,7 +833,7 @@ a:hover, a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: unset;
 }
 
 .page-links {
@@ -976,13 +976,18 @@ object {
 }
 #masthead .site-branding{
 	width: 4em;
+	margin-left: .5em;
 }
 #masthead .header-navigation ul{
 	width: 50vw;
+	max-width: 40em;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-around;
 	list-style: none;
+	font-family: proxima-nova, sans-serif;
+	font-weight: 700;
+	font-style: normal;
 }
 #masthead .header-navigation ul>li{
 	line-height: 4em;
@@ -999,4 +1004,122 @@ object {
 	justify-content:space-between;
 	position: relative;
 	background: #000;
+}
+#colophon .site-info{
+	background: rgba(0,0,0, .45);
+	width: 100%;
+	height: 100%;
+}
+#colophon .site-info>div{
+	width: 100%;
+	max-width: 80em;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: flex-start;
+	align-items: flex-start;
+	margin: auto;
+	overflow: hidden;
+}
+#colophon .site-info img{
+	opacity: .35;
+	width: 25em;
+	align-self: flex-end;
+}
+#colophon .site-info .sm{
+	height: 25em;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-end;
+	align-content: center;
+	align-items: center;
+}
+#colophon .site-info .sm>a{
+	display: block;
+}
+#colophon .site-info .sm img{
+	width: auto;
+	height: 5em;
+	margin-top: 5em;
+    margin-bottom: 1em;
+}
+#colophon .site-info .footer-nav{
+	height: 24em;
+	margin: 2em;
+}
+#colophon .site-info .footer-nav ul{
+	height: 24em;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	padding: unset;
+	padding: 1em;
+	margin:unset;
+}
+#colophon .site-info .footer-nav ul a{
+	font-family: proxima-nova, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 1.5em;
+	text-decoration: none;
+	color: #FFF;
+	opacity: .35;
+}
+#colophon .site-info .omnigecko{
+	width: 26em;
+	height: 25em;
+	color: #FFF;
+}
+#colophon .site-info .omnigecko a {
+	color:#FFF;
+	text-decoration: none;
+}
+#colophon .site-info .omnigecko a:hover{
+	opacity: 1;
+}
+#colophon .site-info .omnigecko h5{
+	width: 100%;
+	display: block;
+	font-family: proxima-nova, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 2em;
+	line-height: .25em;
+	text-align: center;
+}
+#colophon .site-info .omnigecko a h5{
+	opacity: .45;
+}
+#colophon .site-info .omnigecko a h5:hover{
+	opacity: 1;
+}
+#colophon .site-info .omnigecko span{
+	display: block;
+	position: absolute;
+}
+#colophon .site-info .omnigecko span p{
+	font-family: proxima-nova, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-align: center;
+	opacity: .45;
+}
+#colophon .site-info .omnigecko span p:hover{
+	opacity: 1;
+}
+#colophon .site-info .omnigecko img{
+	width: 15em;
+	display: block;
+	float: right;
+}
+#colophon .site-info>div>span{
+	width: 100%;
+	display: block;
+	color: #FFF;
+	text-align: center;
+	opacity: .35;
 }
