@@ -53,7 +53,7 @@ get_header();  ?>
 						color: #000;
 						padding: 1em;
 						margin: auto;
-						max-width: 66em;
+						max-width: 55em;
 					}
 					#main .main-content h1,
 					#main .main-content h2,
@@ -62,6 +62,11 @@ get_header();  ?>
 					#main .main-content h5{
 						font-family: proxima-nova, sans-serif;
 						font-weight: 700;
+						font-style: normal;
+					}
+					#main .main-content p{
+						font-family: montserrat, sans-serif;
+						font-weight: 400;
 						font-style: normal;
 					}
 				</style>
