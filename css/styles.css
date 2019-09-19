@@ -1012,6 +1012,7 @@ object {
 	line-height: 4em;
 	max-height: 4em;
 	overflow: hidden;
+	text-align: center;
 }
 #masthead .header-navigation ul>li:hover{
 	max-height: 200em;
@@ -1021,6 +1022,8 @@ object {
 	font-size: 6vw;
 	color: #FFF;
 	transition: color .25s ease-in-out;
+	padding-right: 1em;
+	padding-left: 1em;
 }
 #masthead .header-navigation ul li>a:hover{
 	color: rgba(255,255,255, .45);
@@ -1215,6 +1218,8 @@ object {
 	#masthead .header-navigation ul li>a{
 		text-decoration: none;
 		font-size: unset;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 	#colophon .site-info .omnigecko{
 		height: 25em;

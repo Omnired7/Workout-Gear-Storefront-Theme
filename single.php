@@ -27,7 +27,6 @@ get_header();  ?>
                                 </div>
                             </div>
                         </div>
-						<div class="sharethis-inline-share-buttons"></div>
 				</div>
 				<style>
 					body{
@@ -37,6 +36,8 @@ get_header();  ?>
 						background: url(<?php echo get_the_post_thumbnail_url(null,'full'); ?>);
 						background-repeat: no-repeat;
 						background-size: cover;
+						background-attachment: fixed;
+    					background-size: 100% auto;
 					}
 					#main .first-feat .post .clear{
 						width: 100vw;
