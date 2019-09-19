@@ -1,0 +1,169 @@
+#main .first-feat{
+    display: block;
+    width: 100%;
+    background: #000;
+}
+.featured-post>div{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    background: rgba(0,0,0, .45);
+    padding-top: 1em;
+    padding-left: 1em;
+}
+#main .first-feat .post{
+    display: flex;
+    height: 100%;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: unset;
+}
+#main .first-feat .post h1, #main .first-feat .post h2, #main .first-feat .post h3{
+    color: #FFF !important;
+}
+#main .first-feat .post h1{
+    font-family: copperplate, serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: unset;
+    margin-top: 1em;
+    margin-left: 0em;
+}
+#main .first-feat .post h2{
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: unset;
+}
+#main .first-feat .post h3{
+    font-size: 1em;
+    margin: unset;
+}
+#main .first-feat .post .left{
+    width: 100%;
+}
+#main .first-feat .post .clear{
+    width: 100%;
+    padding: 1em;
+    padding-top: 0em;
+    margin-top: 1em;
+    color: #FFF;
+}
+#main .first-feat .post .clear p{
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.15em;
+    margin-bottom: unset;
+}
+#main .first-feat .post .clear a{
+    color: #FFF;
+    margin-right: 1em;
+    text-decoration: none;
+    float: right;
+    margin-bottom: 1em;
+}
+#main .page-posts{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: unset;
+    margin-bottom: 1em;
+}
+#main .page-posts>a{
+    display: block;
+    width: 100%;
+    height: 27em;
+    margin-bottom: 0em;
+    text-decoration: none;
+}
+#main .page-posts .post{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background: #000;
+}
+#main .page-posts .post>div{
+    height: 100%;
+    background: rgba(0,0,0, .45);
+    padding: 1em;
+}
+#main .page-posts .post img{
+    width: 100%;
+    height: auto;
+    border-radius: .25em;
+}
+#main .page-posts .post h3, #main .page-posts .post h4, #main .page-posts .post h5{
+    color: #FFF;
+}
+#main .page-posts .post h4{
+    margin-top: 0em;
+}
+#main .page-posts .post h5{
+    position: absolute;
+    align-self: flex-end;
+    margin-top: unset;
+}
+/*Navigation*/
+#main .navigation{
+    width: 100%;
+    margin-top: 1em;
+    display: block;
+}
+#main .navigation .nav-links{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    list-style: none;
+    padding: unset;
+    margin: unset;
+}
+#main .navigation .nav-links a, #main .navigation .nav-links span{
+    display: block;
+    background: #000;
+    padding: .5em;
+    text-decoration: none;
+    color: #FFF ;
+    border: solid #FFF .05em;
+    border-radius: .25em;
+    margin-left: .5em;
+    margin-bottom: 1em;
+}
+#main .navigation .nav-links a:hover, #main .navigation .nav-links .current{
+    background: #FFF;
+    color:#000;
+    cursor: pointer;
+    text-decoration: none;
+}
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    #main .page-posts>a{
+        width: 48%;
+        height: 30em;
+        margin-top: 1em;
+    }
+}
+/* SM */
+@media only screen and (min-width : 768px) {
+    #main .first-feat{
+        display: block;
+    }
+    #main .first-feat .post .left{
+        width: 60%;
+    }
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    #main .page-posts>a{
+        width: 32%;
+        height: 30em;
+    }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    #main .first-feat{
+        height: 30vw;
+    }
+}

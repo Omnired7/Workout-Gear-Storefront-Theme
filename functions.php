@@ -132,6 +132,12 @@ function phoenix_gear_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	if(is_home() || is_single() || is_category() || is_tag() ){
+		wp_enqueue_style('phoenix-gear-', get_template_directory_uri().'/css/blog-page.css', array(), '1.0');
+	}
+	if(is_singular()){
+		wp_enqueue_script('phoenix-gear-sm-share', 'https://platform-api.sharethis.com/js/sharethis.js#property=5d83163c6b3e5d00127039bc&product=inline-share-buttons', array(), '1.0');
+	}
 }
 add_action( 'wp_enqueue_scripts', 'phoenix_gear_scripts' );
 

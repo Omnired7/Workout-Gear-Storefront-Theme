@@ -966,40 +966,83 @@ object {
 #masthead{
 	display: flex;
 	width: 100%;
-	height: 4em;
+	height: 100vh;
+	max-height: 0em;
+	transition: max-height .5s ease-in-out;
 	flex-flow: row nowrap;
 	justify-content:space-between;
-	position: fixed;
+	position: relative;
 	top: 0;
-	background: #000;
 	z-index: 1000;
+	overflow: hidden;
+	position: fixed;
+	background: #000;
+}
+#masthead button{
+	display: none;
+}
+#masthead #site-navigation{
+	display: block;
+}
+#masthead>img{
+	display: block;
+	position: fixed;
+	width: 4em;
+	right: 0;
+	margin-right: 1em;
 }
 #masthead .site-branding{
 	width: 4em;
 	margin-left: .5em;
 }
 #masthead .header-navigation ul{
-	width: 50vw;
-	max-width: 40em;
+	width: 85vw;
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: column nowrap;
 	justify-content: space-around;
 	list-style: none;
 	font-family: proxima-nova, sans-serif;
 	font-weight: 700;
 	font-style: normal;
+	padding: unset;
+	margin: unset;
+	margin-top: 4em;
 }
 #masthead .header-navigation ul>li{
 	line-height: 4em;
+	max-height: 4em;
+	overflow: hidden;
+}
+#masthead .header-navigation ul>li:hover{
+	max-height: 200em;
 }
 #masthead .header-navigation ul li>a{
 	text-decoration: none;
+	font-size: 6vw;
 	color: #FFF;
+	transition: color .25s ease-in-out;
+}
+#masthead .header-navigation ul li>a:hover{
+	color: rgba(255,255,255, .45);
+}
+#masthead .header-navigation ul>li ul{
+	background: #000;
+	width: auto;
+	display: flex;
+	flex-flow: column nowrap;
+    padding: unset;
+	margin: unset;
+	height: auto;
+	text-align: center;
+}
+#masthead .header-navigation ul>li ul>li{
+	border-top: rgba(255,255,255, .5) solid .1em;
+	line-height: 2em;
 }
 #colophon{
 	display: flex;
 	width: 100%;
-	height: 30em;
+	height: auto;
 	flex-flow: row nowrap;
 	justify-content:space-between;
 	position: relative;
@@ -1027,7 +1070,11 @@ object {
 	width: 25em;
 	align-self: flex-end;
 }
+#colophon .site-info>div>img{
+	width: 80%;
+}
 #colophon .site-info .sm{
+	width: 50%;
 	height: 25em;
 	display: flex;
 	flex-flow: column nowrap;
@@ -1071,7 +1118,7 @@ object {
 }
 #colophon .site-info .omnigecko{
 	width: 26em;
-	height: 25em;
+	height: auto;
 	color: #FFF;
 }
 #colophon .site-info .omnigecko a {
@@ -1088,7 +1135,7 @@ object {
 	font-weight: 700;
 	font-style: normal;
 	font-size: 2em;
-	line-height: .25em;
+	line-height: 1em;
 	text-align: center;
 }
 #colophon .site-info .omnigecko a h5{
@@ -1099,7 +1146,7 @@ object {
 }
 #colophon .site-info .omnigecko span{
 	display: block;
-	position: absolute;
+	position: relative;
 }
 #colophon .site-info .omnigecko span p{
 	font-family: proxima-nova, sans-serif;
@@ -1122,4 +1169,63 @@ object {
 	color: #FFF;
 	text-align: center;
 	opacity: .35;
+	margin-top: 1em;
+}	
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	#colophon .site-info>div>img{
+		width: 25em;
+	}
+	#colophon .site-info .sm{
+		width: unset;
+	}
+	#colophon .site-info .omnigecko span{
+		position: absolute;
+	}
+}
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	#colophon .site-info .omnigecko h5{
+		line-height: .25em;
+	}
+}
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	#masthead{
+		display: flex;
+		width: 100%;
+		height: 4em;
+		max-height: unset !important;
+		flex-flow: row nowrap;
+		justify-content:space-between;
+		position: fixed;
+		overflow: unset;
+		top: 0;
+		z-index: 1000;
+	}
+	#masthead>img{
+		display: none;
+	}
+	#masthead .header-navigation ul{
+		width: 50vw;
+		max-width: 40em;
+		flex-flow: row nowrap;
+		margin-top: unset;
+	}
+	#masthead .header-navigation ul li>a{
+		text-decoration: none;
+		font-size: unset;
+	}
+	#colophon .site-info .omnigecko{
+		height: 25em;
+	}
+}
+ /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	#colophone{
+		height: 30em;
+	}
+	#colophon .site-info>div>span{
+		margin-top: unset;
+	}
 }
