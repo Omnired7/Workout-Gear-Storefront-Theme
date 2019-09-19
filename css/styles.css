@@ -1174,6 +1174,15 @@ object {
 	opacity: .35;
 	margin-top: 1em;
 }	
+/* Wo Commerce*/
+.woocommerce ul.products li.product .woocommerce-loop-category__title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product h3{
+	text-align: center;
+}
+.woocommerce ul.products li.product .price{
+	text-align: center;
+}
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 	#colophon .site-info>div>img{

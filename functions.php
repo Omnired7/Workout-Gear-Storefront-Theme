@@ -124,7 +124,7 @@ function phoenix_gear_scripts() {
 	wp_enqueue_style('phoenix-gear-adobe-fonts', 'https://use.typekit.net/cjs5usr.css"', array(), '1.1');
 	wp_enqueue_style( 'phoenix-gear-styles', get_template_directory_uri().'/css/styles.css' );
 	wp_enqueue_script( 'phoenix-gear-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	Wp_enqueue_script('phoenix-gear-script', get_template_directory_uri().'/js/script.js', array('jquery'));
+	wp_enqueue_script('phoenix-gear-script', get_template_directory_uri().'/js/script.js', array('jquery'));
 	wp_enqueue_script( 'phoenix-gear-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	if(is_front_page()){
 		wp_enqueue_style('phoenix-gear-front-page-styles', get_template_directory_uri().'/css/front-page.css' , null, '1.1');
@@ -137,6 +137,10 @@ function phoenix_gear_scripts() {
 	}
 	if(is_singular()){
 		wp_enqueue_script('phoenix-gear-sm-share', 'https://platform-api.sharethis.com/js/sharethis.js#property=5d83163c6b3e5d00127039bc&product=inline-share-buttons', array(), '1.1');
+	}
+	//Wocommerce Checks
+	if(is_woocommerce()){
+		wp_enqueue_style('phoenix-gear-wocom-style', get_template_directory_uri().'/css/prodcts-page.css', array(),'1.0');
 	}
 }
 add_action( 'wp_enqueue_scripts', 'phoenix_gear_scripts' );

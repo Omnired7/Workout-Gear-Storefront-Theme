@@ -43,7 +43,7 @@
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-	<?php $footer_parallax = wp_get_attachment_image_src(get_theme_mod('front_page_banner_img'), 'full'); ?>
+	<?php $footer_parallax = wp_get_attachment_image_src(get_theme_mod('pg_footer_img'), 'full'); ?>
 	<style>
 		#colophon {
 			background: url(<?php echo $footer_parallax[0]; ?>) ;

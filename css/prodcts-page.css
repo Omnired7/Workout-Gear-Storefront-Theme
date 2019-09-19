@@ -1,0 +1,14 @@
+#main{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+ /* Medium devices (tablets, 768px and up) */
+ @media (min-width: 768px) {
+    #main{
+        margin-left: unset;
+        margin-right: unset;
+        max-width: 70em;
+        margin: auto;
+        margin-top: 4em;
+    }
+ }
