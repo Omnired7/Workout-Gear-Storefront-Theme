@@ -40,21 +40,5 @@
 		</nav><!-- #site-navigation -->
 		<img src="<?php echo get_template_directory_uri().'/img/Hamburger_icon_white_x200.svg.png' ?>" alt="Menu Icon"/>
 	</header><!-- #masthead -->
-	<img id="ios-icon" src="<?php echo get_template_directory_uri().'/img/Hamburger_icon_white_x200.svg.png' ?>" alt="Menu Icon"/>
-	<style>
-		#ios-icon{
-			display:none;
-		}
-		/* CSS specific to iOS devices */ 
-		@supports (-webkit-overflow-scrolling: touch) {
-			#ios-icon{
-				display:block;
-				position: absolute;
-				height: 4em;
-				width: 4em;
-				right: 0;
-				margin-right: 1em;
-			}
-		}
-	</style>
+	<p style="position:absolute; right:0;top:0;">Test button</p>
 	<div id="content" class="site-content">

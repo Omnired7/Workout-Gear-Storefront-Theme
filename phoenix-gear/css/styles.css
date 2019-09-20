@@ -997,7 +997,7 @@ object {
 	margin-left: .5em;
 }
 #masthead .header-navigation ul{
-	width: 100vw;
+	width: 85vw;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-around;
@@ -1207,9 +1207,6 @@ object {
 	#colophon .site-info .omnigecko h5{
 		line-height: .25em;
 	}
-	#masthead .header-navigation ul li>a{
-		font-size: 4vw;
-	}
 }
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -1233,7 +1230,6 @@ object {
 		max-width: 40em;
 		flex-flow: row nowrap;
 		margin-top: unset;
-		overflow: unset !important;
 	}
 	#masthead .header-navigation ul li>a{
 		text-decoration: none;
