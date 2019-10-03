@@ -21,7 +21,7 @@ get_header();  ?>
                                 <div class='left'>
                                     <h1><?php the_title(); ?></h1>
                                     <h2>By: <?php echo get_the_author_meta('nickname'); ?></h2>
-                                    <h3><?php the_date(); ?></h3>
+                                    <h3><?php if(! is_product()): the_date(); endif; ?></h3>
                                 </div>
                                 <div class='clear'>
                                 </div>

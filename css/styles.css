@@ -989,12 +989,13 @@ object {
 	position: fixed;
 	width: 4em;
 	right: 0;
-	margin-right: 1em;
+	margin-right: 10vw;
 	z-index: 20000;
 }
 #masthead .site-branding{
 	width: 4em;
 	margin-left: .5em;
+	position: absolute;
 }
 #masthead .header-navigation ul{
 	width: 100vw;
@@ -1204,6 +1205,9 @@ object {
 }
  /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+	#masthead>img{
+		margin-right: 1.5em;
+	}
 	#colophon .site-info .omnigecko h5{
 		line-height: .25em;
 	}
@@ -1224,6 +1228,9 @@ object {
 		overflow: unset;
 		top: 0;
 		z-index: 1000;
+	}
+	#masthead .site-branding{
+		position: relative;
 	}
 	#masthead>img{
 		display: none;

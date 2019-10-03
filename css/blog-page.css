@@ -5,6 +5,7 @@
 }
 .featured-post>div{
     height: 100%;
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -156,6 +157,9 @@
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+    #main .first-feat .post{
+        margin-top:1em;
+    }
     #main .page-posts>a{
         width: 32%;
         height: 30em;
@@ -164,6 +168,6 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
     #main .first-feat{
-        height: 30vw;
+        height: 55vh;
     }
 }
